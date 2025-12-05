@@ -5,7 +5,12 @@
   margin: 0; /*remove a margem padrao dos elementos*/
   padding: 0; /*remove o padding padrao dos elementos*/
 }
-
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #141414; /*cor de fundo do site*/
 }
@@ -45,83 +50,4 @@ body {
 .nav-list a:hover {
   color: #00aaff; /*cor dos links ao passar o mouse*/
 }
-
-/*Parte chata*/
-.text-deg{
-    background-image: url("../img/EVO-L1.svg");
-     background-repeat: no-repeat;   /* evita repetição */
-    margin-top: 20px; 
-    height: 230px; 
-}
-.container-main {
-    width: 100%; /* ocupa toda a largura da tela */
-  max-width: 1200px; /*limita a largura maxima do conteudo*/
-  display: grid;
-    grid-template-columns: 1fr 1fr; /*duas colunas de largura*/
-    margin: 0 auto;
-    gap: 20px; /*espaçamento entre os itens*/
-    
-}
-.img-container {
-    display: grid;/*define o container como grid*/
-    max-width: 500px;/*limita a largura maxima do container*/
-    width: 100%;/*o container ocupa toda a largura disponivel*/
-    height: auto;/*altura automatica*/
-
-  
-   
-}
-.img-robo{
-    position: relative;
-    top: -50px; /* Ajusta a posição vertical da imagem */
-    width: 100%; /* A imagem do robô ocupa toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços em branco abaixo da imagem */
-    z-index: 1; /* Garante que o container fique acima de outros elementos */
- 
-}
-.textos{
-    color: #ffffff;
-    padding: 20px;/*espaçamento interno*/
-    display: flex;/*define o container como flexbox*/
-    flex-direction: column;/*alinha os itens em coluna*/
-    margin-top: 50px;/*espaçamento superior*/
-    gap: 10px; /*espaçamento entre os elementos*/
-}
-.textos h1{
-    font-size: 2rem;
-}
-.textos p{
-    font-size: 1.2rem;
-    line-height: 1.5;/*espaçamento entre linhas*/
-}
-.textos h2{
-    color: #5ed835;
-}
-.botao{
-  width: 250px;/*largura do botao*/
-    margin-top: 20px;/*espaçamento superior do botao*/
-    padding: 10px 20px;/*espaçamento interno do botao*/
-    font-size: 1rem;/*tamanho da fonte do botao*/
-    color: #ffffff;/*cor do texto do botao*/
-    background-color: #5ed835;/*cor de fundo do botao*/
-    border: none;/*remove a borda padrao do botao*/
-    border-radius: 0px 0px 30px; /*apenas 1 arredondada*/
-    cursor: pointer;/*muda o cursor ao passar o mouse*/
-    transition: background-color 0.3s;/*transição suave para a mudança de cor*/ 
-}
-.botao:hover{
-    background-color: #00aaff;/*cor de fundo do botao ao passar o mouse*/
-}
-.icon-fut{
-    width: 250px; /*largura do icone*/
-    margin-top: 20px; /*espaçamento superior do icone*/
-    cursor: pointer;/*muda o cursor ao passar o mouse*/
-    transition: transform 0.3s;/*transição suave para a transformação*/
-}
-.icon-fut:hover{
-    transform: scale(1.1);/*aumenta o tamanho do icone ao passar o mouse*/
-   
-}
-
 
