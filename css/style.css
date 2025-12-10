@@ -8,10 +8,11 @@
 
 body {
   background-color: #141414; /*cor de fundo do site*/
+  
 }
 .container-global {
   width: 100%; /* ocupa toda a largura da tela */
-  max-width: 1200px; /*limita a largura maxima do conteudo*/
+  max-width: none; /*limita a largura maxima do conteudo*/
   margin: 0px auto; /* centraliza o conteudo horizontalmente */
   padding: 0 20px; /* adiciona espaçamento nas laterais */
   box-sizing: border-box; /* impede que o padding aumente a largura total do elemento */
@@ -49,6 +50,7 @@ body {
 /*Parte chata*/
 .text-deg {
   background-image: url("../img/EVO-L1.svg");
+  background-position: center;  /* centraliza a imagem */
   background-repeat: no-repeat; /* evita repetição */
   margin-top: 20px;
   height: 230px;
