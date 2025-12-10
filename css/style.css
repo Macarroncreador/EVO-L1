@@ -18,7 +18,7 @@ body {
   box-sizing: border-box; /* impede que o padding aumente a largura total do elemento */
 }
 .container {
-  max-width: 1200px; /*limita a largura maxima do conteudo*/
+  max-width: 100%; /*limita a largura maxima do conteudo*/
   margin: 0 auto;
 }
 .header-container {
