@@ -19,12 +19,16 @@ body {
     z-index: 2; /* Garante que o conteúdo fique acima do texto de fundo */
 
 }
+
 .main {
   position: relative; /* Necessário para que elementos absolutos se baseiem aqui */
   min-height: 80vh;
   display: flex;
   align-items: center;
-  
+}
+.container {
+  max-width: 100%; /*limita a largura maxima do conteudo*/
+  margin: 0 auto;
 }
 .header-container {
   display: flex;
