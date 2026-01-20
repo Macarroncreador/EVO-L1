@@ -10,23 +10,29 @@ body {
   background-color: #141414; /*cor de fundo do site*/
   
 }
-.container-global {
-  width: 100%; /* ocupa toda a largura da tela */
-  max-width: none; /*limita a largura maxima do conteudo*/
-  margin: 0px auto; /* centraliza o conteudo horizontalmente */
-  padding: 0 20px; /* adiciona espaçamento nas laterais */
-  box-sizing: border-box; /* impede que o padding aumente a largura total do elemento */
+
+.section-inicio{
+  width: 100%; /* Permite que o conteúdo use toda a largura disponível */
+  padding: 0 5%;   /* Cria um respiro nas laterais sem prender o robô */
+  margin: 0;
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima do texto de fundo */
+
 }
-.container {
-  max-width: 1200px; /*limita a largura maxima do conteudo*/
-  margin: 0 auto;
+.main {
+  position: relative; /* Necessário para que elementos absolutos se baseiem aqui */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  
 }
 .header-container {
-  display: flex; /*define o container como flexbox*/
-  flex-wrap: wrap; /*permite que os itens quebrem de linha se necessário*/
-  align-items: center; /*alinha os itens no centro verticalmente*/
-  justify-content: space-between; /*alinha os itens no centro e espaça entre eles*/
-  padding: 40px 20px 15px; /*espaçamento interno*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1945px;      /* Acompanha a largura do site */
+  margin: 0 auto;
+  padding: 30px 50px;
   border-bottom: 3px solid #5ed835;
 }
 .nav-list {
@@ -50,60 +56,75 @@ body {
 /*Parte chata*/
 .text-deg {
   background-image: url("../img/EVO-L1.svg");
-  background-position: center;  /* centraliza a imagem */
-  background-repeat: no-repeat; /* evita repetição */
-  margin-top: 20px;
-  height: 230px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Adicione isso para a imagem não cortar */
+  
+  position: absolute; /* Essencial para sobrepor */
+  top: 150px;         /* Ajuste conforme o seu design */
+  left: 0;
+  right: 0;
+  height: 400px;      /* Aumente a altura para aparecer bem */
+  z-index: -1;        /* Joga para trás de tudo */
+  pointer-events: none; /* Garante que o fundo não atrapalhe cliques em botões */
 }
+
 .container-main {
-  width: 100%; /* ocupa toda a largura da tela */
-  max-width: 1200px; /*limita a largura maxima do conteudo*/
-  display: grid;
-  grid-template-columns: 1fr 1fr; /*duas colunas de largura*/
-  margin: 0 auto;
-  gap: 20px; /*espaçamento entre os itens*/
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  min-height: 80vh;
+  max-width: 100% !important; /* Força a ocupar os 2560px da sua tela */
+  padding: 0px 20px;
+  margin: 0;
+  gap: 180px;              /* Espaçamento entre o robô e os textos */
+ 
 }
 .img-container {
-  display: grid; /*define o container como grid*/
-  max-width: 500px; /*limita a largura maxima do container*/
-  width: 100%; /*o container ocupa toda a largura disponivel*/
-  height: auto; /*altura automatica*/
+  display: grid;
+  place-items: center;      /* Centraliza o robô */
 }
+ 
 .img-robo {
-  position: relative;
-  top: -50px; /* Ajusta a posição vertical da imagem */
-  width: 100%; /* A imagem do robô ocupa toda a largura do container */
-  height: auto; /* Mantém a proporção da imagem */
-  display: block; /* Remove espaços em branco abaixo da imagem */
-  z-index: 1; /* Garante que o container fique acima de outros elementos */
+  width: 110%;             /* Faz ele crescer para fora do container se necessário */
+  max-width: 850px;        /* Ajuste esse valor até o tamanho ficar ideal no seu Macbook */
+  transform: translateX(-5%); /* Move ele levemente para a esquerda */
+  height: auto;
+  margin-left: 100px;
 }
-.textos {
+.textos {              /* Ocupa um pouco menos de espaço que o robô */
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 6%;        /* Margem de segurança da borda direita */
+  z-index: 2;
+  padding: 10px ;
+
   color: #ffffff;
-  padding: 20px; /*espaçamento interno*/
-  display: flex; /*define o container como flexbox*/
-  flex-direction: column; /*alinha os itens em coluna*/
-  margin-top: 50px; /*espaçamento superior*/
-  gap: 10px; /*espaçamento entre os elementos*/
 }
 .textos h1 {
-  font-size: 2rem;
+  font-size: 40px;
 }
 .textos p {
-  font-size: 1.2rem;
+  font-size: 30px;
+  margin-top: 20px;
   line-height: 1.5; /*espaçamento entre linhas*/
 }
 .textos h2 {
+  font-size: 30px;
+  margin-top: 20px;
   color: #5ed835;
 }
 .botao {
-  width: 250px; /*largura do botao*/
-  margin-top: 20px; /*espaçamento superior do botao*/
+  width: 350px; /*largura do botao*/
+  margin-top: 40px; /*espaçamento superior do botao*/
   padding: 10px 20px; /*espaçamento interno do botao*/
-  font-size: 1rem; /*tamanho da fonte do botao*/
+  font-size: 1.5rem; /*tamanho da fonte do botao*/
   color: #ffffff; /*cor do texto do botao*/
   background-color: #5ed835; /*cor de fundo do botao*/
   border: none; /*remove a borda padrao do botao*/
-  border-radius: 0px 0px 30px; /*apenas 1 arredondada*/
+  border-radius: 0px 0px 38px; /*apenas 1 arredondada*/
   cursor: pointer; /*muda o cursor ao passar o mouse*/
   transition: background-color 0.3s; /*transição suave para a mudança de cor*/
 }
@@ -111,8 +132,8 @@ body {
   background-color: #00aaff; /*cor de fundo do botao ao passar o mouse*/
 }
 .icon-fut {
-  width: 250px; /*largura do icone*/
-  margin-top: 20px; /*espaçamento superior do icone*/
+  width: 350px; /*largura do icone*/
+  margin-top: 40px; /*espaçamento superior do icone*/
   cursor: pointer; /*muda o cursor ao passar o mouse*/
   transition: transform 0.3s; /*transição suave para a transformação*/
 }
